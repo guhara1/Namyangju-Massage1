@@ -51,3 +51,42 @@ python3 build.py
 2. 필요 시 `TELEGRAM_BUILD`, `TELEGRAM_PARTNER` 링크 변경
 3. `python3 build.py` 재실행 (canonical·sitemap·robots.txt·루트 리다이렉트에 반영됨)
 4. Google Search Console에 `sitemap.xml` 제출
+
+## 색인 가속 (네이버·구글·빙)
+
+빌드하면 색인용 파일이 자동 생성됩니다.
+
+- `sitemap.xml` — `<lastmod>` 포함, 색인 페이지 전체
+- `rss.xml` — 피드 기반 발견 보조 (robots·`<head>`에 명시)
+- `robots.txt` — sitemap·rss 모두 명시
+- `<KEY>.txt` — IndexNow 소유권 확인 키 파일 (루트)
+- 메인페이지 `<head>`에 네이버 사이트 소유확인 메타 태그
+
+### IndexNow — 빙·네이버·얀덱스 즉시 통보
+
+키는 `content/site.py`의 `INDEXNOW_KEY`. **배포가 끝나** `https://도메인/<KEY>.txt`가
+살아 있어야 통보가 검증됩니다.
+
+```bash
+python3 build.py                 # 사이트 + 키 파일 생성 → 배포
+python tools/indexnow.py         # 첫 일괄 통보: sitemap 전체 URL을 즉시 통보
+python tools/indexnow.py https://namyangju-massage1.pages.dev/새글/   # 글 올릴 때마다
+```
+
+### 구글 (IndexNow 미참여)
+
+구글은 `sitemap.xml` + Search Console이 정석입니다. 보조로 Indexing API를 쓰려면:
+
+```bash
+pip install google-auth
+export GOOGLE_APPLICATION_CREDENTIALS=/경로/service_account.json
+python tools/google_index.py     # sitemap 전체 / 또는 URL 지정
+```
+
+> 구글 sitemap ping 엔드포인트는 2023년 폐지되어 사용하지 않습니다.
+
+### 검색엔진 소유확인 등록 순서
+
+1. 네이버 서치어드바이저 → 사이트 등록 → 메인페이지 메타 태그 확인(이미 삽입됨) → 사이트맵/RSS 제출
+2. 구글 Search Console → 도메인/URL 등록 → `sitemap.xml` 제출
+3. 빙 웹마스터 → 사이트 등록(IndexNow 키 자동 인식) → 사이트맵 제출

@@ -11,6 +11,10 @@ PHONE_DISPLAY = "0508-202-4719"
 TELEGRAM_BUILD = "https://t.me/googleseolab"   # 웹사이트 제작문의
 TELEGRAM_PARTNER = "https://t.me/googleseolab"  # 제휴문의
 
+# IndexNow 키 (Bing·Naver·Yandex 즉시 색인 통보용)
+# 빌드 시 루트에 <KEY>.txt 파일이 생성되며, 배포 후 그 URL이 살아 있어야 통보가 검증된다.
+INDEXNOW_KEY = "ab63fa24781c488f832870f492ae79cadd7a765382f84397a36d15f16b2867c6"
+
 # 경로 접두사 — 루트(/)에서 바로 서빙한다. (네임스페이스 없음)
 BASE = ""
 

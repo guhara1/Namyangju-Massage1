@@ -4,6 +4,9 @@ from .cta import cta
 
 _H = "/" + BASE  # 루트(/)
 
+# 네이버 서치어드바이저 사이트 소유 확인
+_NAVER = '<meta name="naver-site-verification" content="b74cde6a835489e50a67b58c02161a6b0c6e42b3" />\n'
+
 _JSONLD = f"""<script type="application/ld+json">
 {{
   "@context": "https://schema.org",
@@ -161,7 +164,7 @@ PAGE = {
     "desc": "남양주시 출장마사지·홈타이 예약 전 다산동, 별내동, 진접읍, 호평동, 덕소 생활권을 확인하세요.",
     "h1": "남양주시 출장마사지 · 남양주시 홈타이 지역별 예약 안내",
     "body": _BODY,
-    "extra_head": _JSONLD,
+    "extra_head": _NAVER + _JSONLD,
     "breadcrumb": [],
     "hero": _HERO,
 }
