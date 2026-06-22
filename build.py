@@ -296,18 +296,20 @@ def build() -> None:
     # .nojekyll (GitHub Pages)
     open(os.path.join(ROOT, ".nojekyll"), "w").close()
 
-    # 루트 리다이렉트 — 메인 페이지는 /gyeonggi/namyangju/ 에 위치한다.
-    home = "/" + BASE
-    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(
-            f'<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">'
-            f'<title>{BRAND}</title>'
-            f'<link rel="canonical" href="{BASE_URL.rstrip("/")}{home}">'
-            f'<meta http-equiv="refresh" content="0; url={home}">'
-            f'<meta name="robots" content="noindex,follow">'
-            f'<script>location.replace("{home}");</script>'
-            f'</head><body><a href="{home}">{BRAND} 바로가기</a></body></html>\n'
-        )
+    # 루트 리다이렉트 — 메인이 하위 경로에 있을 때만 생성한다.
+    # BASE 가 빈 문자열이면 메인이 이미 루트(/)에 있으므로 리다이렉트가 필요 없다.
+    if BASE:
+        home = "/" + BASE
+        with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
+            f.write(
+                f'<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">'
+                f'<title>{BRAND}</title>'
+                f'<link rel="canonical" href="{BASE_URL.rstrip("/")}{home}">'
+                f'<meta http-equiv="refresh" content="0; url={home}">'
+                f'<meta name="robots" content="noindex,follow">'
+                f'<script>location.replace("{home}");</script>'
+                f'</head><body><a href="{home}">{BRAND} 바로가기</a></body></html>\n'
+            )
 
     width = max(len(p) for p, _, _ in report)
     print(f"{'PATH'.ljust(width)}  CHARS  ROBOTS")

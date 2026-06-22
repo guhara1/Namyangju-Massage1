@@ -3,10 +3,10 @@
 from .site import BRAND, PHONE_DISPLAY
 from .cta import cta
 
-_H = "/gyeonggi/namyangju/"
+_H = "/"
 
 PAGE = {
-    "path": "gyeonggi/namyangju/about/",
+    "path": "about/",
     "title": f"사이트 소개·콘텐츠 원칙｜{BRAND}",
     "desc": "남양주 방문 관리 안내를 누가, 어떻게, 왜 만드는지와 운영·검수 기준을 공개합니다.",
     "h1": "사이트 소개와 콘텐츠 원칙",

@@ -1,12 +1,12 @@
 # 역세권 안내 — 허브 1개 + 역 15개. 환승역도 역명 기준 URL 하나만 운영한다.
 from .cta import cta
 
-_H = "/gyeonggi/namyangju/"
+_H = "/"
 
 
 def _station(slug, name, title, desc, body):
     return {
-        "path": f"gyeonggi/namyangju/station/{slug}/",
+        "path": f"station/{slug}/",
         "title": title,
         "desc": desc,
         "h1": f"{name} 인근 방문 관리 안내",
@@ -20,15 +20,15 @@ _HUB_BODY = """
 
 <section><h2>역세권 안내를 구성한 기준</h2><p>이 페이지는 몇 가지 원칙으로 정리되어 있습니다. 첫째, 한 역은 하나의 URL만 운영합니다. 별내역처럼 8호선 별내선과 경춘선이 만나는 환승역이라도 노선별로 페이지를 쪼개지 않고 역명 기준 한 페이지로 안내합니다. 같은 위치를 두 개의 주소로 중복해 만들면 이용자에게 혼란만 주기 때문입니다. 둘째, 아직 개통하지 않았거나 예정 단계인 역은 단독 페이지를 만들지 않습니다. 운영 중인 실제 역만 안내해야 위치 기준이 정확하게 유지됩니다. 셋째, 구리역·도농역처럼 행정구역상 구리시이거나 시 경계에 가까운 역은 별도 페이지 대신 인접 생활권을 설명할 때만 참고로 언급합니다. 이렇게 해야 중복 없이 실제 이동 동선에 맞는 안내가 가능합니다. 역세권은 어디까지나 위치를 빠르게 가늠하기 위한 좌표이며, 행정구역인 동·읍·면 단위 생활권 안내와는 관점이 다릅니다. 동 페이지가 그 지역에서의 일상 생활권을 설명한다면, 이 역세권 페이지는 철도 노선을 따라 사람과 차량이 어떻게 움직이는지를 기준으로 정리한다는 점을 기억해 두시면 두 안내를 함께 보실 때 도움이 됩니다.</p></section>
 
-<section><h2>경춘선 역세권</h2><p>경춘선은 청량리·상봉에서 출발해 남양주를 가로질러 춘천까지 이어지는 노선으로, 남양주 동·북부 생활권의 중심축입니다. 본 안내에서 다루는 경춘선 역은 <a href="/gyeonggi/namyangju/station/byeollae-station/">별내역 출장마사지 생활권 안내</a>, <a href="/gyeonggi/namyangju/station/byeollae-byeolgaram-station/">별내별가람역 인근 방문 안내</a>, <a href="/gyeonggi/namyangju/station/toegyewon-station/">퇴계원역 출장마사지 안내</a>, <a href="/gyeonggi/namyangju/station/sareung-station/">사릉역 인근 안내</a>, <a href="/gyeonggi/namyangju/station/geumgok-station/">금곡역 출장마사지 안내</a>, <a href="/gyeonggi/namyangju/station/pyeongnae-hopyeong-station/">평내호평역 출장마사지 안내</a>, <a href="/gyeonggi/namyangju/station/maseok-station/">마석역 인근 안내</a>, <a href="/gyeonggi/namyangju/station/cheonmasan-station/">천마산역 인근 안내</a>입니다. 호평·평내·마석·금곡 등 남양주 인구가 밀집한 생활권이 모두 이 노선을 따라 분포합니다.</p></section>
+<section><h2>경춘선 역세권</h2><p>경춘선은 청량리·상봉에서 출발해 남양주를 가로질러 춘천까지 이어지는 노선으로, 남양주 동·북부 생활권의 중심축입니다. 본 안내에서 다루는 경춘선 역은 <a href="/station/byeollae-station/">별내역 출장마사지 생활권 안내</a>, <a href="/station/byeollae-byeolgaram-station/">별내별가람역 인근 방문 안내</a>, <a href="/station/toegyewon-station/">퇴계원역 출장마사지 안내</a>, <a href="/station/sareung-station/">사릉역 인근 안내</a>, <a href="/station/geumgok-station/">금곡역 출장마사지 안내</a>, <a href="/station/pyeongnae-hopyeong-station/">평내호평역 출장마사지 안내</a>, <a href="/station/maseok-station/">마석역 인근 안내</a>, <a href="/station/cheonmasan-station/">천마산역 인근 안내</a>입니다. 호평·평내·마석·금곡 등 남양주 인구가 밀집한 생활권이 모두 이 노선을 따라 분포합니다.</p></section>
 
-<section><h2>수도권 4호선 진접선 역세권</h2><p>진접선은 서울 지하철 4호선을 북쪽으로 연장한 구간으로, 진접·오남 일대의 출퇴근 동선을 크게 바꿔놓았습니다. 본 안내에서는 <a href="/gyeonggi/namyangju/station/jinjeop-station/">진접역 출장마사지 생활권 안내</a>와 <a href="/gyeonggi/namyangju/station/onam-station/">오남역 인근 방문 안내</a>를 다룹니다. 별내별가람역도 진접선과 연계되는 지점에 있어 별내 북부와 진접 방향 이동을 함께 참고하면 좋습니다.</p></section>
+<section><h2>수도권 4호선 진접선 역세권</h2><p>진접선은 서울 지하철 4호선을 북쪽으로 연장한 구간으로, 진접·오남 일대의 출퇴근 동선을 크게 바꿔놓았습니다. 본 안내에서는 <a href="/station/jinjeop-station/">진접역 출장마사지 생활권 안내</a>와 <a href="/station/onam-station/">오남역 인근 방문 안내</a>를 다룹니다. 별내별가람역도 진접선과 연계되는 지점에 있어 별내 북부와 진접 방향 이동을 함께 참고하면 좋습니다.</p></section>
 
-<section><h2>8호선 별내선 역세권</h2><p>별내선은 잠실 방면 8호선을 별내까지 연장한 노선으로, 다산신도시와 별내신도시의 서울 접근성을 끌어올렸습니다. 본 안내에서는 <a href="/gyeonggi/namyangju/station/dasan-station/">다산역 출장마사지 생활권 안내</a>와 <a href="/gyeonggi/namyangju/station/byeollae-station/">별내역 출장마사지 생활권 안내</a>를 다룹니다. 다산역은 다산신도시 한복판, 별내역은 별내신도시와 경춘선 환승의 중심입니다.</p></section>
+<section><h2>8호선 별내선 역세권</h2><p>별내선은 잠실 방면 8호선을 별내까지 연장한 노선으로, 다산신도시와 별내신도시의 서울 접근성을 끌어올렸습니다. 본 안내에서는 <a href="/station/dasan-station/">다산역 출장마사지 생활권 안내</a>와 <a href="/station/byeollae-station/">별내역 출장마사지 생활권 안내</a>를 다룹니다. 다산역은 다산신도시 한복판, 별내역은 별내신도시와 경춘선 환승의 중심입니다.</p></section>
 
-<section><h2>경의중앙선 역세권(한강변)</h2><p>경의중앙선은 한강을 따라 와부·조안 방면으로 이어지며 남양주 남부 강변 생활권을 묶습니다. 본 안내에서는 <a href="/gyeonggi/namyangju/station/deokso-station/">덕소역 출장마사지 생활권 안내</a>, <a href="/gyeonggi/namyangju/station/dosim-station/">도심역 인근 방문 안내</a>, <a href="/gyeonggi/namyangju/station/paldang-station/">팔당역 한강변 안내</a>, <a href="/gyeonggi/namyangju/station/ungilsan-station/">운길산역 북한강 생활권 안내</a>를 다룹니다. 덕소 일대 아파트 단지부터 팔당·운길산의 강변 숙소·펜션까지 폭넓게 분포합니다.</p></section>
+<section><h2>경의중앙선 역세권(한강변)</h2><p>경의중앙선은 한강을 따라 와부·조안 방면으로 이어지며 남양주 남부 강변 생활권을 묶습니다. 본 안내에서는 <a href="/station/deokso-station/">덕소역 출장마사지 생활권 안내</a>, <a href="/station/dosim-station/">도심역 인근 방문 안내</a>, <a href="/station/paldang-station/">팔당역 한강변 안내</a>, <a href="/station/ungilsan-station/">운길산역 북한강 생활권 안내</a>를 다룹니다. 덕소 일대 아파트 단지부터 팔당·운길산의 강변 숙소·펜션까지 폭넓게 분포합니다.</p></section>
 
-<section><h2>역 기준 예약 방법</h2><p>역세권은 위치를 빠르게 설명하기 위한 기준일 뿐, 실제 방문은 정확한 주소로 이루어집니다. 예약 시 가까운 역명과 함께 "○○역 도보 5분 ○○아파트", "○○역 인근 오피스텔" 같은 식으로 알려주시면 위치 확인이 빨라집니다. 자세한 절차는 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>에서, 준비물과 확인 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>에서 확인하실 수 있습니다. 행정구역별 안내는 <a href="/gyeonggi/namyangju/#areas">남양주 지역별 안내</a>, 생활권 묶음은 <a href="/gyeonggi/namyangju/area/">남양주 생활권별 안내</a>에서 함께 보실 수 있습니다. 행정 구역 경계나 역 위치가 궁금하실 때는 <a href="https://www.nyj.go.kr" target="_blank" rel="noopener">남양주시청 공식 누리집</a>도 참고하시면 도움이 됩니다.</p></section>
+<section><h2>역 기준 예약 방법</h2><p>역세권은 위치를 빠르게 설명하기 위한 기준일 뿐, 실제 방문은 정확한 주소로 이루어집니다. 예약 시 가까운 역명과 함께 "○○역 도보 5분 ○○아파트", "○○역 인근 오피스텔" 같은 식으로 알려주시면 위치 확인이 빨라집니다. 자세한 절차는 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>에서, 준비물과 확인 사항은 <a href="/checklist/">방문 전 체크리스트</a>에서 확인하실 수 있습니다. 행정구역별 안내는 <a href="/#areas">남양주 지역별 안내</a>, 생활권 묶음은 <a href="/area/">남양주 생활권별 안내</a>에서 함께 보실 수 있습니다. 행정 구역 경계나 역 위치가 궁금하실 때는 <a href="https://www.nyj.go.kr" target="_blank" rel="noopener">남양주시청 공식 누리집</a>도 참고하시면 도움이 됩니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>역에서 만나서 함께 이동하나요?</h3><p>아니요. 역명은 위치를 설명하기 위한 기준일 뿐입니다. 관리사는 알려주신 자택·오피스텔·숙소 주소로 직접 방문하며, 역에서 만나는 방식이 아닙니다.</p></div>
@@ -39,7 +39,7 @@ _HUB_BODY = """
 """
 
 HUB = {
-    "path": "gyeonggi/namyangju/station/",
+    "path": "station/",
     "title": "남양주 역세권 출장마사지｜다산·별내·평내호평역 안내",
     "desc": "남양주 주요 역세권별 출장마사지·홈타이 안내. 다산역, 별내역, 평내호평역, 마석역, 덕소역 인근을 확인하세요.",
     "h1": "남양주시 역세권별 안내",
@@ -61,9 +61,9 @@ _DASAN_BODY = """
 
 <section><h2>다산동 생활권과의 차이</h2><p>다산역 안내가 별내선 이동 동선을 중심으로 위치를 짚는다면, 행정구역 단위의 일상 생활권은 별도로 정리되어 있습니다. 같은 다산동이라도 역세권에서 본 위치와 동 단위 생활권에서 본 위치는 관점이 다르므로, 두 안내를 함께 참고하시면 위치를 더 명확히 전달하실 수 있습니다. 특히 역에서 다소 떨어진 다산동 외곽 단지는 역세권보다 생활권 기준으로 설명하시는 편이 자연스럽습니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>다산역은 별내선을 따라 별내역과 이어지며, 도농·구리 방면 경계 생활권과도 가깝습니다. 같은 다산신도시라도 생활권 묶음 안내가 따로 있으니 함께 참고하시면 좋습니다. 다산동의 생활권 중심 안내는 <a href="/gyeonggi/namyangju/dasan-dong/">다산동 출장마사지 생활권 안내</a>에서, 다산신도시 전체 묶음은 <a href="/gyeonggi/namyangju/area/dasan-newtown/">다산신도시 생활권 종합 안내</a>에서 확인하실 수 있습니다.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>다산역은 별내선을 따라 별내역과 이어지며, 도농·구리 방면 경계 생활권과도 가깝습니다. 같은 다산신도시라도 생활권 묶음 안내가 따로 있으니 함께 참고하시면 좋습니다. 다산동의 생활권 중심 안내는 <a href="/dasan-dong/">다산동 출장마사지 생활권 안내</a>에서, 다산신도시 전체 묶음은 <a href="/area/dasan-newtown/">다산신도시 생활권 종합 안내</a>에서 확인하실 수 있습니다.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준일 뿐, 관리사는 알려주신 다산동 내 주소로 직접 방문합니다. 역에서 만나는 방식이 아닙니다. 예약 절차가 궁금하시면 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역과 노선 정보는 <a href="https://ko.wikipedia.org/wiki/다산역" target="_blank" rel="noopener">다산역 위키백과 문서</a>에서도 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준일 뿐, 관리사는 알려주신 다산동 내 주소로 직접 방문합니다. 역에서 만나는 방식이 아닙니다. 예약 절차가 궁금하시면 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역과 노선 정보는 <a href="https://ko.wikipedia.org/wiki/다산역" target="_blank" rel="noopener">다산역 위키백과 문서</a>에서도 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>다산역에서 만나서 같이 가나요?</h3><p>아니요. 다산역은 위치를 설명하기 위한 기준일 뿐입니다. 관리사는 알려주신 다산동 자택·오피스텔로 직접 방문합니다.</p></div>
@@ -98,9 +98,9 @@ _BYEOLLAE_BODY = """
 
 <section><h2>별내동 생활권과의 차이</h2><p>별내역 안내가 두 노선의 환승 동선을 중심으로 위치를 짚는다면, 별내동의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권 관점에서는 역을 향한 이동이 중심이지만, 생활권 관점에서는 학군·상권·공원 등 일상 반경이 기준이 됩니다. 두 안내의 관점이 다르므로 함께 참고하시면 위치를 더 분명히 전달하실 수 있습니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>별내역은 별내별가람역, 퇴계원역과 경춘선·진접선 흐름으로 이어지고 다산역과는 별내선으로 연결됩니다. 생활권 중심의 별내동 안내는 <a href="/gyeonggi/namyangju/byeollae-dong/">별내동 출장마사지 생활권 안내</a>, 별내신도시 전체 묶음은 <a href="/gyeonggi/namyangju/area/byeollae-newtown/">별내신도시 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>별내역은 별내별가람역, 퇴계원역과 경춘선·진접선 흐름으로 이어지고 다산역과는 별내선으로 연결됩니다. 생활권 중심의 별내동 안내는 <a href="/byeollae-dong/">별내동 출장마사지 생활권 안내</a>, 별내신도시 전체 묶음은 <a href="/area/byeollae-newtown/">별내신도시 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>두 노선이 만나는 역이라도 관리사가 역에서 기다리는 일은 없습니다. 알려주신 별내동 주소로 직접 방문합니다. 예약 흐름은 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하시고, 역 정보는 <a href="https://ko.wikipedia.org/wiki/별내역" target="_blank" rel="noopener">별내역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>두 노선이 만나는 역이라도 관리사가 역에서 기다리는 일은 없습니다. 알려주신 별내동 주소로 직접 방문합니다. 예약 흐름은 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하시고, 역 정보는 <a href="https://ko.wikipedia.org/wiki/별내역" target="_blank" rel="noopener">별내역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>별내역은 환승역인데 페이지가 하나뿐인가요?</h3><p>네. 노선이 둘이라도 같은 역세권이므로 역명 기준 한 페이지로만 안내합니다.</p></div>
@@ -135,9 +135,9 @@ _BYEOLGARAM_BODY = """
 
 <section><h2>별내면 생활권과의 차이</h2><p>별가람역 안내가 진접선 연계 동선과 도시·외곽 경계를 중심으로 위치를 짚는다면, 별내면의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도와 도로 흐름이 기준이지만, 별내면 생활권은 마을과 농촌 권역이 기준이라 관점이 다릅니다. 외곽 마을은 역세권보다 생활권 기준 설명이 더 자연스러울 수 있으니 함께 참고하세요.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>별가람역은 별내역과 생활권을 공유하면서 별내면 방향으로 확장됩니다. 생활권 중심의 별내면 안내는 <a href="/gyeonggi/namyangju/byeollae-myeon/">별내면 출장마사지 생활권 안내</a>에서, 별내면·청학 묶음은 <a href="/gyeonggi/namyangju/area/byeollae-myeon-cheonghak/">별내면·청학 생활권 종합 안내</a>에서 확인하실 수 있습니다.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>별가람역은 별내역과 생활권을 공유하면서 별내면 방향으로 확장됩니다. 생활권 중심의 별내면 안내는 <a href="/byeollae-myeon/">별내면 출장마사지 생활권 안내</a>에서, 별내면·청학 묶음은 <a href="/area/byeollae-myeon-cheonghak/">별내면·청학 생활권 종합 안내</a>에서 확인하실 수 있습니다.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치를 가리키는 기준이며 관리사는 알려주신 주소로 직접 방문합니다. 방문 전 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/별내별가람역" target="_blank" rel="noopener">별내별가람역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치를 가리키는 기준이며 관리사는 알려주신 주소로 직접 방문합니다. 방문 전 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/별내별가람역" target="_blank" rel="noopener">별내별가람역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>별내면 외곽도 방문하나요?</h3><p>네, 별내면 방향 전원주택·마을도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주시면 도움이 됩니다.</p></div>
@@ -172,9 +172,9 @@ _JINJEOP_BODY = """
 
 <section><h2>진접읍 생활권과의 차이</h2><p>진접역 안내가 진접선 종착부의 통근 동선을 중심으로 위치를 짚는다면, 진접읍의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도 이동이 기준이지만, 넓은 진접읍 생활권은 마을과 권역별 생활 반경이 기준이라 관점이 다릅니다. 역에서 먼 진접 외곽은 생활권 기준 설명이 더 자연스러우니 함께 참고하세요.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>진접역은 진접선을 따라 오남역과 이어지며 두 지역이 하나의 생활권 흐름을 형성합니다. 생활권 중심의 진접읍 안내는 <a href="/gyeonggi/namyangju/jinjeop-eup/">진접읍 출장마사지 생활권 안내</a>, 진접·오남 묶음은 <a href="/gyeonggi/namyangju/area/jinjeop-onam/">진접·오남 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>진접역은 진접선을 따라 오남역과 이어지며 두 지역이 하나의 생활권 흐름을 형성합니다. 생활권 중심의 진접읍 안내는 <a href="/jinjeop-eup/">진접읍 출장마사지 생활권 안내</a>, 진접·오남 묶음은 <a href="/area/jinjeop-onam/">진접·오남 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 진접읍 주소로 직접 방문합니다. 예약 절차는 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/진접역" target="_blank" rel="noopener">진접역 위키백과 문서</a>에서 볼 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 진접읍 주소로 직접 방문합니다. 예약 절차는 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/진접역" target="_blank" rel="noopener">진접역 위키백과 문서</a>에서 볼 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>장현 신규 단지도 가능한가요?</h3><p>네, 장현 단지 대부분이 역세권 안에 있습니다. 단지명과 시간을 알려주시면 확인해 드립니다.</p></div>
@@ -209,9 +209,9 @@ _ONAM_BODY = """
 
 <section><h2>오남읍 생활권과의 차이</h2><p>오남역 안내가 진접선 이동 동선과 평지·저수지 권역을 중심으로 위치를 짚는다면, 오남읍의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도와 도로 흐름이 기준이고, 생활권은 마을과 자연 권역이 기준이라 관점이 다릅니다. 저수지 안쪽 마을은 역세권보다 생활권 기준 설명이 더 자연스러우니 함께 참고하세요.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>오남역은 진접역과 한 노선으로 이어지며 진접·오남이 하나의 생활권 흐름을 이룹니다. 생활권 중심의 오남읍 안내는 <a href="/gyeonggi/namyangju/onam-eup/">오남읍 출장마사지 생활권 안내</a>, 진접·오남 묶음은 <a href="/gyeonggi/namyangju/area/jinjeop-onam/">진접·오남 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>오남역은 진접역과 한 노선으로 이어지며 진접·오남이 하나의 생활권 흐름을 이룹니다. 생활권 중심의 오남읍 안내는 <a href="/onam-eup/">오남읍 출장마사지 생활권 안내</a>, 진접·오남 묶음은 <a href="/area/jinjeop-onam/">진접·오남 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준일 뿐, 관리사는 알려주신 오남읍 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/오남역" target="_blank" rel="noopener">오남역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준일 뿐, 관리사는 알려주신 오남읍 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/오남역" target="_blank" rel="noopener">오남역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>오남 저수지 안쪽 마을도 되나요?</h3><p>네, 저수지 안쪽 마을도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주세요.</p></div>
@@ -246,9 +246,9 @@ _TOEGYEWON_BODY = """
 
 <section><h2>퇴계원읍 생활권과의 차이</h2><p>퇴계원역 안내가 경춘선 이동 동선과 도심 접근성을 중심으로 위치를 짚는다면, 퇴계원읍의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 작은 읍이라 두 관점이 상당 부분 겹치지만, 별내·진건 방향으로 넓혀 보는 생활권 안내와 함께 참고하시면 위치를 더 분명히 전달하실 수 있습니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>퇴계원역은 경춘선으로 별내역과 이어지고 진건 방향과도 가깝습니다. 생활권 중심의 퇴계원읍 안내는 <a href="/gyeonggi/namyangju/toegyewon-eup/">퇴계원읍 출장마사지 생활권 안내</a>, 퇴계원·진건 묶음은 <a href="/gyeonggi/namyangju/area/toegyewon-jingeon/">퇴계원·진건 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>퇴계원역은 경춘선으로 별내역과 이어지고 진건 방향과도 가깝습니다. 생활권 중심의 퇴계원읍 안내는 <a href="/toegyewon-eup/">퇴계원읍 출장마사지 생활권 안내</a>, 퇴계원·진건 묶음은 <a href="/area/toegyewon-jingeon/">퇴계원·진건 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 퇴계원읍 주소로 직접 방문합니다. 예약 흐름은 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/퇴계원역" target="_blank" rel="noopener">퇴계원역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 퇴계원읍 주소로 직접 방문합니다. 예약 흐름은 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/퇴계원역" target="_blank" rel="noopener">퇴계원역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>퇴계원 읍내 전역이 되나요?</h3><p>네, 면적이 작아 읍내 대부분이 역세권에 가깝습니다. 위치와 시간을 알려주시면 확인해 드립니다.</p></div>
@@ -283,9 +283,9 @@ _SAREUNG_BODY = """
 
 <section><h2>진건읍 생활권과의 차이</h2><p>사릉역 안내가 경춘선 이동 동선과 능역 주변 한적한 권역을 중심으로 위치를 짚는다면, 진건읍의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도와 도로 흐름이, 생활권은 마을과 농촌 권역이 기준이라 관점이 다릅니다. 능 뒤편 외곽 마을은 생활권 기준 설명이 더 자연스러우니 함께 참고하세요.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>사릉역은 경춘선으로 퇴계원·금곡 방향과 이어지며 진건 생활권의 중심에 가깝습니다. 생활권 중심의 진건읍 안내는 <a href="/gyeonggi/namyangju/jingeon-eup/">진건읍 출장마사지 생활권 안내</a>, 퇴계원·진건 묶음은 <a href="/gyeonggi/namyangju/area/toegyewon-jingeon/">퇴계원·진건 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>사릉역은 경춘선으로 퇴계원·금곡 방향과 이어지며 진건 생활권의 중심에 가깝습니다. 생활권 중심의 진건읍 안내는 <a href="/jingeon-eup/">진건읍 출장마사지 생활권 안내</a>, 퇴계원·진건 묶음은 <a href="/area/toegyewon-jingeon/">퇴계원·진건 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 진건읍 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/사릉역" target="_blank" rel="noopener">사릉역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 진건읍 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/사릉역" target="_blank" rel="noopener">사릉역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>사릉 인근 외곽 마을도 되나요?</h3><p>네, 외곽 마을도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주세요.</p></div>
@@ -320,9 +320,9 @@ _GEUMGOK_BODY = """
 
 <section><h2>금곡동 생활권과의 차이</h2><p>금곡역 안내가 경춘선 이동 동선과 행정 중심지 접근성을 중심으로 위치를 짚는다면, 금곡동의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도와 도로 흐름이, 생활권은 학군·상권 등 일상 반경이 기준이라 관점이 다릅니다. 양정 방향으로 넓혀 보는 생활권 안내와 함께 참고하시면 위치를 더 분명히 전달하실 수 있습니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>금곡역은 경춘선으로 사릉·평내호평과 이어지고 양정 방향과도 가깝습니다. 생활권 중심의 금곡동 안내는 <a href="/gyeonggi/namyangju/geumgok-dong/">금곡동 출장마사지 생활권 안내</a>, 금곡·양정 묶음은 <a href="/gyeonggi/namyangju/area/geumgok-yangjeong/">금곡·양정 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>금곡역은 경춘선으로 사릉·평내호평과 이어지고 양정 방향과도 가깝습니다. 생활권 중심의 금곡동 안내는 <a href="/geumgok-dong/">금곡동 출장마사지 생활권 안내</a>, 금곡·양정 묶음은 <a href="/area/geumgok-yangjeong/">금곡·양정 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 금곡동 주소로 직접 방문합니다. 시 행정 정보는 <a href="https://www.nyj.go.kr" target="_blank" rel="noopener">남양주시청 공식 누리집</a>에서 확인할 수 있습니다. 예약 절차는 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 금곡동 주소로 직접 방문합니다. 시 행정 정보는 <a href="https://www.nyj.go.kr" target="_blank" rel="noopener">남양주시청 공식 누리집</a>에서 확인할 수 있습니다. 예약 절차는 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>시청 주변 단지도 되나요?</h3><p>네, 시청 인근 주거 대부분이 역세권에 가깝습니다. 단지명과 시간을 알려주시면 확인해 드립니다.</p></div>
@@ -357,9 +357,9 @@ _PYEONGNAE_BODY = """
 
 <section><h2>호평·평내 생활권과의 차이</h2><p>평내호평역 안내가 경춘선 이동 동선을 중심으로 위치를 짚는다면, 호평동과 평내동의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도와 도로 흐름이 기준이고, 생활권은 학군·상권 등 일상 반경이 기준이라 관점이 다릅니다. 역에서 떨어진 단지는 생활권 기준 설명이 더 자연스러우니 함께 참고하세요.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>평내호평역은 경춘선으로 금곡·마석과 이어집니다. 생활권 중심의 호평동 안내는 <a href="/gyeonggi/namyangju/hopyeong-dong/">호평동 출장마사지 생활권 안내</a>, 호평·평내 묶음은 <a href="/gyeonggi/namyangju/area/hopyeong-pyeongnae/">호평·평내 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>평내호평역은 경춘선으로 금곡·마석과 이어집니다. 생활권 중심의 호평동 안내는 <a href="/hopyeong-dong/">호평동 출장마사지 생활권 안내</a>, 호평·평내 묶음은 <a href="/area/hopyeong-pyeongnae/">호평·평내 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 호평·평내 주소로 직접 방문합니다. 예약 흐름은 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/평내호평역" target="_blank" rel="noopener">평내호평역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 호평·평내 주소로 직접 방문합니다. 예약 흐름은 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/평내호평역" target="_blank" rel="noopener">평내호평역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>호평·평내 전역이 되나요?</h3><p>두 동 대부분 단지가 역세권 안에 있습니다. 단지명과 시간을 알려주시면 확인해 드립니다.</p></div>
@@ -394,9 +394,9 @@ _MASEOK_BODY = """
 
 <section><h2>화도읍 생활권과의 차이</h2><p>마석역 안내가 경춘선 이동 동선과 시가지·외곽 권역을 중심으로 위치를 짚는다면, 화도읍의 일상 생활권은 행정구역 단위로 따로 정리되어 있습니다. 역세권은 철도와 도로 흐름이 기준이고, 넓은 화도읍 생활권은 마을과 권역별 생활 반경이 기준이라 관점이 다릅니다. 외곽 마을은 생활권 기준 설명이 더 자연스러우니 함께 참고하세요.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>마석역은 경춘선으로 천마산역과 이어지며 화도 생활권의 중심입니다. 생활권 중심의 화도읍 안내는 <a href="/gyeonggi/namyangju/hwado-eup/">화도읍 출장마사지 생활권 안내</a>, 마석·화도 묶음은 <a href="/gyeonggi/namyangju/area/maseok-hwado/">마석·화도 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>마석역은 경춘선으로 천마산역과 이어지며 화도 생활권의 중심입니다. 생활권 중심의 화도읍 안내는 <a href="/hwado-eup/">화도읍 출장마사지 생활권 안내</a>, 마석·화도 묶음은 <a href="/area/maseok-hwado/">마석·화도 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 화도읍 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/마석역" target="_blank" rel="noopener">마석역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 화도읍 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/마석역" target="_blank" rel="noopener">마석역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>화도읍 외곽도 되나요?</h3><p>네, 외곽 마을·펜션도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주세요.</p></div>
@@ -433,9 +433,9 @@ _CHEONMASAN_BODY = """
 
 <section><h2>방문 시간대와 계절 변수</h2><p>천마산역 일대는 계절과 시간대에 따라 도로 사정이 크게 달라지는 편입니다. 봄 진달래철과 가을 단풍철에는 등산·나들이 차량이 몰려 역 주변과 도립공원 진입로가 혼잡하고, 겨울철 산자락 길은 결빙으로 이동 속도가 느려질 수 있습니다. 그래서 산자락 펜션·전원주택을 이용하실 때는 가능한 한 여유 있는 시간대로 예약을 잡으시는 편이 안정적입니다. 평지 주거지는 이런 변수의 영향을 덜 받지만, 그래도 정확한 출구와 단지명을 알려주시면 도착이 한결 매끄럽습니다. 위치와 희망 시간을 함께 알려주시면 계절 변수까지 고려해 가능 여부를 확인해 드립니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>천마산역은 경춘선으로 마석역과 이어지며 화도 생활권의 외곽에 해당합니다. 생활권 중심의 화도읍 안내는 <a href="/gyeonggi/namyangju/hwado-eup/">화도읍 출장마사지 생활권 안내</a>, 마석·화도 묶음은 <a href="/gyeonggi/namyangju/area/maseok-hwado/">마석·화도 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>천마산역은 경춘선으로 마석역과 이어지며 화도 생활권의 외곽에 해당합니다. 생활권 중심의 화도읍 안내는 <a href="/hwado-eup/">화도읍 출장마사지 생활권 안내</a>, 마석·화도 묶음은 <a href="/area/maseok-hwado/">마석·화도 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 화도읍 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/천마산역" target="_blank" rel="noopener">천마산역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 화도읍 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/천마산역" target="_blank" rel="noopener">천마산역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>천마산 펜션·전원주택도 되나요?</h3><p>네, 산자락 숙소도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주세요.</p></div>
@@ -470,9 +470,9 @@ _DEOKSO_BODY = """
 
 <section><h2>출퇴근 시간대 이용 팁</h2><p>덕소는 서울로 향하는 통근 인구가 많은 만큼, 아침과 저녁 출퇴근 시간대에는 강변북로 진입로와 역 주변 도로가 붐비는 편입니다. 같은 단지라도 이 시간대에는 도착까지 평소보다 시간이 더 걸릴 수 있으니, 급한 일정이라면 위치와 희망 시간을 미리 넉넉하게 알려주시는 것이 좋습니다. 또 대단지가 많아 같은 시간대에 여러 곳에서 수요가 겹치기도 하므로, 원하시는 시간을 일찍 알려주실수록 가능 여부 확인이 수월합니다. 강변 방향 단지는 진입로가 큰길에서 한 번 꺾여 들어가는 경우가 많으니, 가까운 다리나 사거리 이름을 함께 주시면 도착이 빨라집니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>덕소역은 경의중앙선으로 도심역·팔당역과 이어집니다. 생활권 중심의 와부읍 안내는 <a href="/gyeonggi/namyangju/wabu-eup/">와부읍 출장마사지 생활권 안내</a>, 덕소·와부 묶음은 <a href="/gyeonggi/namyangju/area/deokso-wabu/">덕소·와부 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>덕소역은 경의중앙선으로 도심역·팔당역과 이어집니다. 생활권 중심의 와부읍 안내는 <a href="/wabu-eup/">와부읍 출장마사지 생활권 안내</a>, 덕소·와부 묶음은 <a href="/area/deokso-wabu/">덕소·와부 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 와부읍 주소로 직접 방문합니다. 예약 흐름은 <a href="/gyeonggi/namyangju/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/덕소역" target="_blank" rel="noopener">덕소역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 와부읍 주소로 직접 방문합니다. 예약 흐름은 <a href="/reservation/">남양주 출장마사지 예약 방법 안내</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/덕소역" target="_blank" rel="noopener">덕소역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>덕소 강변 단지도 되나요?</h3><p>네, 강변 단지 대부분이 역세권 안에 있습니다. 단지명과 시간을 알려주시면 확인해 드립니다.</p></div>
@@ -507,9 +507,9 @@ _DOSIM_BODY = """
 
 <section><h2>덕소·도심 구분이 중요한 이유</h2><p>도심역은 이름과 달리 번화한 도심이 아니라 덕소와 팔당 사이의 한적한 강변 구간을 가리킵니다. 덕소역과 한 정거장 거리라 두 역세권이 일부 겹치지만, 큰길과 단지 구조, 강변 진입로가 서로 달라 위치를 혼동하면 엉뚱한 방향으로 동선을 잡게 됩니다. 그래서 예약 시 "덕소가 아니라 도심역 인근"임을 분명히 해 주시는 것이 무엇보다 중요합니다. 강변 주택과 소규모 단지는 비슷한 풍경이 이어져 외부에서 구분이 쉽지 않으니, 도로명 주소에 더해 가까운 강변 카페나 다리, 하천 합류 지점 같은 지형지물을 함께 알려주시면 도착이 정확하고 빨라집니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>도심역은 경의중앙선으로 덕소·팔당과 이어지며 와부 생활권에 속합니다. 생활권 중심의 와부읍 안내는 <a href="/gyeonggi/namyangju/wabu-eup/">와부읍 출장마사지 생활권 안내</a>, 덕소·와부 묶음은 <a href="/gyeonggi/namyangju/area/deokso-wabu/">덕소·와부 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>도심역은 경의중앙선으로 덕소·팔당과 이어지며 와부 생활권에 속합니다. 생활권 중심의 와부읍 안내는 <a href="/wabu-eup/">와부읍 출장마사지 생활권 안내</a>, 덕소·와부 묶음은 <a href="/area/deokso-wabu/">덕소·와부 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 와부읍 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/도심역" target="_blank" rel="noopener">도심역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 와부읍 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/도심역" target="_blank" rel="noopener">도심역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>덕소역과 무엇이 다른가요?</h3><p>도심역은 덕소보다 단지 밀도가 낮고 한강에 더 가까운 한적한 구간입니다.</p></div>
@@ -544,9 +544,9 @@ _PALDANG_BODY = """
 
 <section><h2>팔당 일대 위치 설명 요령</h2><p>팔당역에서 와부 방향과 조안 방향은 강을 따라 정반대로 이어지기 때문에, 같은 "팔당 인근"이라도 어느 방향인지에 따라 이동 거리가 크게 차이 납니다. 와부 방향은 시가지와 가까워 비교적 접근이 쉽지만, 조안 방향 강변 마을은 굽이진 강변도로를 한참 따라가야 닿는 곳이 많습니다. 그래서 위치를 알려주실 때는 방향을 먼저 짚어 주신 뒤 도로명 주소와 가까운 랜드마크를 덧붙이시면 가장 정확합니다. 강을 사이에 두고 마주 보는 지역이 헷갈리기 쉬우니, 한강 어느 편인지까지 함께 말씀해 주시면 도착 동선을 정확히 잡을 수 있습니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>팔당역은 경의중앙선으로 도심·운길산과 이어지며 와부·조안을 잇습니다. 생활권 중심의 조안면 안내는 <a href="/gyeonggi/namyangju/joan-myeon/">조안면 출장마사지 생활권 안내</a>, 팔당·조안 묶음은 <a href="/gyeonggi/namyangju/area/paldang-joan/">팔당·조안 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>팔당역은 경의중앙선으로 도심·운길산과 이어지며 와부·조안을 잇습니다. 생활권 중심의 조안면 안내는 <a href="/joan-myeon/">조안면 출장마사지 생활권 안내</a>, 팔당·조안 묶음은 <a href="/area/paldang-joan/">팔당·조안 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 와부·조안 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/팔당역" target="_blank" rel="noopener">팔당역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 와부·조안 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/팔당역" target="_blank" rel="noopener">팔당역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>강변 펜션·숙소도 되나요?</h3><p>네, 강변 숙소도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주세요.</p></div>
@@ -581,9 +581,9 @@ _UNGILSAN_BODY = """
 
 <section><h2>계절·시간대에 따른 변수</h2><p>운길산·두물머리 일대는 사계절 내내 나들이객이 찾는 명소라, 주말과 휴일, 단풍·벚꽃철에는 강변도로와 역 주변이 크게 붐빕니다. 이런 시기에는 같은 위치라도 도착까지 시간이 더 걸릴 수 있으니, 가능하면 여유 있는 시간대로 예약을 잡으시는 편이 안정적입니다. 또 강변과 산자락 외곽은 밤이 되면 길이 어둡고 인적이 드물어, 진입로 안내가 없으면 입구를 지나치기 쉽습니다. 야간 방문을 원하시면 가까운 가로등이나 간판, 건물 외관 색 같은 눈에 띄는 특징을 함께 알려주시면 도착이 한결 정확해집니다. 위치와 희망 시간을 함께 주시면 이런 변수까지 고려해 안내해 드립니다.</p></section>
 
-<section><h2>인접 역·생활권과의 관계</h2><p>운길산역은 경의중앙선으로 팔당역과 이어지며 조안 생활권의 최남단에 해당합니다. 생활권 중심의 조안면 안내는 <a href="/gyeonggi/namyangju/joan-myeon/">조안면 출장마사지 생활권 안내</a>, 팔당·조안 묶음은 <a href="/gyeonggi/namyangju/area/paldang-joan/">팔당·조안 생활권 종합 안내</a>에서 확인하세요.</p></section>
+<section><h2>인접 역·생활권과의 관계</h2><p>운길산역은 경의중앙선으로 팔당역과 이어지며 조안 생활권의 최남단에 해당합니다. 생활권 중심의 조안면 안내는 <a href="/joan-myeon/">조안면 출장마사지 생활권 안내</a>, 팔당·조안 묶음은 <a href="/area/paldang-joan/">팔당·조안 생활권 종합 안내</a>에서 확인하세요.</p></section>
 
-<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 조안면 주소로 직접 방문합니다. 준비 사항은 <a href="/gyeonggi/namyangju/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/운길산역" target="_blank" rel="noopener">운길산역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
+<section><h2>예약과 준비</h2><p>역명은 위치 기준이며 관리사는 알려주신 조안면 주소로 직접 방문합니다. 준비 사항은 <a href="/checklist/">방문 전 체크리스트</a>를 참고하세요. 역 정보는 <a href="https://ko.wikipedia.org/wiki/운길산역" target="_blank" rel="noopener">운길산역 위키백과 문서</a>에서 확인할 수 있습니다.</p></section>
 
 <section class="faq"><h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>북한강 펜션·숙소도 되나요?</h3><p>네, 강변 숙소도 시간대에 따라 방문 가능합니다. 진입로 안내를 함께 주세요.</p></div>

@@ -1,6 +1,6 @@
 # 사이트 공통 설정
 # 배포 도메인 확정 후 BASE_URL 을 실제 도메인으로 변경하세요.
-BASE_URL = "https://barogo-namyangju.example.com"
+BASE_URL = "https://namyangju-massage1.pages.dev"
 
 BRAND = "바로 GO"
 BRAND_MARK = "GO"
@@ -11,8 +11,8 @@ PHONE_DISPLAY = "0508-202-4719"
 TELEGRAM_BUILD = "https://t.me/googleseolab"   # 웹사이트 제작문의
 TELEGRAM_PARTNER = "https://t.me/googleseolab"  # 제휴문의
 
-# 경로 접두사 — 모든 페이지는 경기도 남양주 네임스페이스 아래에 둔다.
-BASE = "gyeonggi/namyangju/"
+# 경로 접두사 — 루트(/)에서 바로 서빙한다. (네임스페이스 없음)
+BASE = ""
 
 # 상단 메뉴 — 메뉴명·URL에는 "출장마사지"를 반복하지 않고 지역명·역명·생활권만 표시한다.
 NAV = [

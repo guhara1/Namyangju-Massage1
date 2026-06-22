@@ -2,11 +2,11 @@
 from .site import BRAND, PHONE, PHONE_DISPLAY
 from .cta import cta
 
-_H = "/gyeonggi/namyangju/"
+_H = "/"
 
 # ── 예약 안내 ─────────────────────────────────────────
 RESERVATION = {
-    "path": "gyeonggi/namyangju/reservation/",
+    "path": "reservation/",
     "title": "남양주 출장마사지 예약 안내｜가능 지역·시간·이동비",
     "desc": "남양주 출장마사지·홈타이 예약 방법, 가능 시간, 추가 이동비, 결제·취소 기준을 한곳에 정리했습니다.",
     "h1": "남양주시 예약 안내",
@@ -64,7 +64,7 @@ RESERVATION = {
 
 # ── 이용 전 확인사항 ───────────────────────────────────
 CHECKLIST = {
-    "path": "gyeonggi/namyangju/checklist/",
+    "path": "checklist/",
     "title": "남양주 출장마사지 이용 전 확인사항｜방문 주소·안전 기준",
     "desc": "남양주 출장마사지·홈타이 이용 전 방문 가능 주소, 자택·숙소 확인, 개인정보 처리 기준을 확인하세요.",
     "h1": "이용 전 확인사항",
@@ -122,7 +122,7 @@ CHECKLIST = {
 
 # ── 홈타이 이용 가이드 ─────────────────────────────────
 HOMETAI = {
-    "path": "gyeonggi/namyangju/hometai-guide/",
+    "path": "hometai-guide/",
     "title": "남양주 홈타이 이용 가이드｜출장마사지와 차이·이용 기준",
     "desc": "남양주 홈타이란 무엇인지, 출장마사지와 차이, 이용 전 기준과 처음 이용 안내를 정리했습니다.",
     "h1": "홈타이 이용 가이드",
@@ -180,7 +180,7 @@ HOMETAI = {
 
 # ── 고객센터 ───────────────────────────────────────────
 SUPPORT = {
-    "path": "gyeonggi/namyangju/support/",
+    "path": "support/",
     "title": "남양주 출장마사지 고객센터｜문의·운영 기준 안내",
     "desc": "남양주 출장마사지·홈타이 문의하기, 자주 묻는 질문, 운영 기준을 안내하는 고객센터입니다.",
     "h1": "고객센터",
@@ -235,7 +235,7 @@ SUPPORT = {
 
 # ── 개인정보 처리방침 ─────────────────────────────────
 PRIVACY = {
-    "path": "gyeonggi/namyangju/privacy/",
+    "path": "privacy/",
     "title": f"개인정보 처리방침｜{BRAND}",
     "desc": "남양주 방문 관리 예약 시 수집하는 개인정보의 항목과 이용 목적, 보관 기준을 안내합니다.",
     "h1": "개인정보 처리방침",
@@ -272,7 +272,7 @@ PRIVACY = {
 
 # ── 이용약관 ───────────────────────────────────────────
 TERMS = {
-    "path": "gyeonggi/namyangju/terms/",
+    "path": "terms/",
     "title": f"이용약관｜{BRAND}",
     "desc": "남양주 방문 관리 서비스 이용 조건, 예약·취소 기준, 금지 행위와 책임 한계를 안내합니다.",
     "h1": "이용약관",

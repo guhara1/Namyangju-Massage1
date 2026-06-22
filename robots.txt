@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://barogo-namyangju.example.com/sitemap.xml
+Sitemap: https://namyangju-massage1.pages.dev/sitemap.xml

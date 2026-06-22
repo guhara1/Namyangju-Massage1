@@ -2,7 +2,7 @@
 from .site import BASE, BASE_URL, BRAND, PHONE, PHONE_DISPLAY
 from .cta import cta
 
-_H = "/" + BASE  # /gyeonggi/namyangju/
+_H = "/" + BASE  # 루트(/)
 
 _JSONLD = f"""<script type="application/ld+json">
 {{
